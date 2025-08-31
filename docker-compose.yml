@@ -6,7 +6,7 @@ services:
     container_name: wg-easy
     environment:
       - HOST=0.0.0.0  # Слушать на всех интерфейсах
-      - PORT=51821
+      - PORT=54322
       - LANG=ru_RU.UTF-8
       # Дополнительные переменные:
       # - WG_DEFAULT_ADDRESS=10.8.0.x
@@ -22,8 +22,8 @@ services:
       - etc_wireguard:/etc/wireguard
       - /lib/modules:/lib/modules:ro
     ports:
-      - "0.0.0.0:51820:51820/udp"  # Явное указание binding на все интерфейсы
-      - "0.0.0.0:51821:51821/tcp"
+      - "0.0.0.0:54321:54321/udp"  # Явное указание binding на все интерфейсы
+      - "0.0.0.0:54322:54322/tcp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
