@@ -22,8 +22,8 @@ services:
       - etc_wireguard:/etc/wireguard
       - /lib/modules:/lib/modules:ro
     ports:
-      - "0.0.0.0:54321:54321/udp"  # Явное указание binding на все интерфейсы
-      - "0.0.0.0:54322:54322/tcp"
+      - "0.0.0.0:54321:51820/udp"  # Явное указание binding на все интерфейсы
+      - "0.0.0.0:54322:51821/tcp"
     restart: unless-stopped
     cap_add:
       - NET_ADMIN
